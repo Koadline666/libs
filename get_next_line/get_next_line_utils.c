@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 12:13:36 by afenzl            #+#    #+#             */
-/*   Updated: 2022/06/24 11:11:40 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/06/24 11:14:59 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char	*join(char *s1, const char *s2)
 
 	i = 0;
 	j = 0;
-	new = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	new = (char *)malloc(ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1);
 	if (new == NULL)
 		return (NULL);
 	while (s1[i] != '\0')
