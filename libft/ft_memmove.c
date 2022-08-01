@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 12:46:39 by afenzl            #+#    #+#             */
-/*   Updated: 2022/04/05 17:15:01 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/01 13:09:12 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	int		i;
 	char	*d;
 	char	*s;
-	int		i;
 
 	i = 0;
 	d = (char *)dst;
