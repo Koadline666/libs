@@ -6,13 +6,13 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:20:18 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 18:52:49 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/03 21:14:52 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstlen(t_list *lst)
 {
 	int		i;
 	t_list	*ptr;

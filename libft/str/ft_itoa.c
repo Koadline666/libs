@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:30:02 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 18:54:00 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/03 21:18:18 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,12 @@ static char	*ft_logic(int i, int vr, int n, char *str)
 	return (str);
 }
 
+/**
+ * @brief converts a integer to a string
+ * 
+ * @param c 
+ * @return char *
+ */
 char	*ft_itoa(int n)
 {
 	int		i;

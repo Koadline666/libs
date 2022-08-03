@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 21:44:44 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 18:52:31 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/03 21:15:33 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstlast(t_list *lst)
 
 	if (lst != NULL)
 	{
-		i = ft_lstsize(lst) - 1;
+		i = ft_lstlen(lst) - 1;
 		while (i--)
 		{
 			lst = lst->next;

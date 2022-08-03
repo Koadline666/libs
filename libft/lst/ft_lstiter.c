@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 22:16:15 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 18:52:28 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/03 21:15:43 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	tmp = lst;
 	if (tmp != NULL && f != NULL)
 	{
-		i = ft_lstsize(lst);
+		i = ft_lstlen(lst);
 		while (i--)
 		{
 			f(lst->content);
