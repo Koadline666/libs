@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:26:54 by afenzl            #+#    #+#             */
-/*   Updated: 2022/04/08 17:36:23 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/01 13:10:57 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		ft_putchar_fd('-', fd);
 		ft_putchar_fd('2', fd);
-		ft_putnbr_fd(147483648, fd);
+		ft_putnbr_fd(INT_MIN, fd);
 	}
 	else if (n > 9)
 	{
