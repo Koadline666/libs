@@ -6,7 +6,7 @@ LIBFT := libft
 PRINTF := printf
 GNL := get_next_line
 
-FREE = 
+FREE =	ft_free2.c		\
 
 LST =	ft_lstnew.c			\
 		ft_lstadd_front.c	\
@@ -47,6 +47,7 @@ STR =	ft_strlen.c		\
 		ft_strjoin.c 	\
 		ft_strtrim.c	\
 		ft_split.c		\
+		ft_splitlen.c	\
 		ft_itoa.c		\
 		ft_strmapi.c	\
 		ft_striteri.c	\
@@ -55,9 +56,10 @@ STR =	ft_strlen.c		\
 		ft_putendl_fd.c	\
 		ft_putnbr_fd.c	
 
-LIBFTCFILES := $(addprefix $(LIBFT)/mem/, $(MEM))	\
-				$(addprefix $(LIBFT)/lst/, $(LST))	\
-				$(addprefix $(LIBFT)/str/, $(STR))	
+LIBFTCFILES :=	$(addprefix $(LIBFT)/free/, $(FREE))	\
+				$(addprefix $(LIBFT)/mem/, $(MEM))		\
+				$(addprefix $(LIBFT)/lst/, $(LST))		\
+				$(addprefix $(LIBFT)/str/, $(STR))
 
 # PRINTF
 PRINTFCFILES = ft_printf.c ft_types.c ft_print_sciu.c ft_print_p.c ft_print_x.c

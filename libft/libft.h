@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:31:16 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 21:17:50 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/03 21:51:36 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_list
 }					t_list;
 
 // free
+void	ft_free2(char **split);
 
 // lst --> list functions
 void	ft_lstadd_front(t_list **lst, t_list *new);
