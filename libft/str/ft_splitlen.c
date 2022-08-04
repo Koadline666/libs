@@ -6,7 +6,7 @@
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 18:36:21 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 21:22:34 by afenzl           ###   ########.fr       */
+/*   Updated: 2022/08/04 15:06:51 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int	ft_splitlen(char **split)
 		return (-1);
 	while (split[i] != NULL)
 		i++;
-	return (0);
+	return (i);
 }
