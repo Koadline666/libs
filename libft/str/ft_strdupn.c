@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_strdupn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aiarinov <aiarinov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 17:20:18 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/21 14:40:26 by aiarinov         ###   ########.fr       */
+/*   Created: 2022/08/20 12:31:58 by annaiarinov       #+#    #+#             */
+/*   Updated: 2022/08/21 14:35:17 by aiarinov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_lstsize(t_list *lst)
+char	*ft_strdupn(char *s, int n)
 {
+	char	*str;
 	int		i;
-	t_list	*ptr;
 
+	str = malloc(sizeof(char) * (n + 1));
+	if (str == NULL || s == NULL)
+		return (NULL);
 	i = 0;
-	ptr = lst;
-	while (ptr != NULL)
+	while (i < n && s[i] != '\0')
 	{
-		ptr = ptr -> next;
+		str[i] = s[i];
 		i++;
 	}
-	return (i);
+	str[i] = '\0';
+	return (str);
 }

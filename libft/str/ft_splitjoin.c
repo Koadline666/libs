@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_splitjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 21:43:15 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/21 16:43:00 by afenzl           ###   ########.fr       */
+/*   Created: 2022/08/22 18:15:40 by afenzl            #+#    #+#             */
+/*   Updated: 2022/08/22 18:16:08 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	**ft_splitjoin(char **split, char *str)
 {
-	t_list	*tmp;
+	char	**ret;
+	int		len;
+	int		i;
 
-	if (*lst)
+	i = 0;
+	if (split == NULL)
+		return (ft_split(str, '\0'));
+	len = ft_splitlen(split);
+	if (str == NULL)
+		return (split);
+	ret = malloc(sizeof(char *) * (len + 2));
+	if (ret == NULL)
+		return (NULL);
+	while (split && split[i] != NULL)
 	{
-		tmp = ft_lstlast(*lst);
-		tmp->next = new;
+		ret[i] = ft_strdup(split[i]);
+		i++;
 	}
-	else
-		*lst = new;
+	ret[i++] = ft_strdup(str);
+	ret[i] = NULL;
+	ft_free2(split);
+	return (ret);
 }

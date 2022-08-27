@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_print2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aiarinov <aiarinov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 17:20:18 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/21 14:40:26 by aiarinov         ###   ########.fr       */
+/*   Created: 2022/08/08 14:42:47 by afenzl            #+#    #+#             */
+/*   Updated: 2022/08/16 14:00:08 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libs.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_print2(char **split)
 {
-	int		i;
-	t_list	*ptr;
+	int	i;
 
 	i = 0;
-	ptr = lst;
-	while (ptr != NULL)
+	while (split && split[i] != NULL)
 	{
-		ptr = ptr -> next;
+		ft_printf("%s\n", split[i]);
 		i++;
 	}
-	return (i);
 }

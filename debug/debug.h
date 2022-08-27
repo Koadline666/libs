@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   debug.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aiarinov <aiarinov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 17:20:18 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/21 14:40:26 by aiarinov         ###   ########.fr       */
+/*   Created: 2022/08/08 14:46:25 by afenzl            #+#    #+#             */
+/*   Updated: 2022/08/08 14:47:48 by afenzl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef DEBUG_H
+# define DEBUG_H
 
-int	ft_lstsize(t_list *lst)
-{
-	int		i;
-	t_list	*ptr;
+void	ft_print2(char **split);
 
-	i = 0;
-	ptr = lst;
-	while (ptr != NULL)
-	{
-		ptr = ptr -> next;
-		i++;
-	}
-	return (i);
-}
+#endif	//DEBUG_H

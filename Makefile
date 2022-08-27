@@ -5,6 +5,7 @@ NAME = libs.a
 LIBFT := libft
 PRINTF := printf
 GNL := get_next_line
+DEBUG := debug
 
 FREE =	ft_free2.c		\
 
@@ -16,7 +17,7 @@ LST =	ft_lstnew.c			\
 		ft_lstclear.c		\
 		ft_lstdelone.c		\
 		ft_lstiter.c		\
-		ft_lstmap.c			
+		ft_lstmap.c
 
 MEM =	ft_memset.c		\
 		ft_bzero.c		\
@@ -24,7 +25,7 @@ MEM =	ft_memset.c		\
 		ft_memmove.c 	\
 		ft_memchr.c		\
 		ft_memcmp.c		\
-		ft_calloc.c		
+		ft_calloc.c
 
 STR =	ft_strlen.c		\
 		ft_isalpha.c 	\
@@ -43,18 +44,21 @@ STR =	ft_strlen.c		\
 		ft_strnstr.c	\
 		ft_atoi.c		\
 		ft_strdup.c		\
+		ft_strdupn.c	\
 		ft_substr.c		\
 		ft_strjoin.c 	\
 		ft_strtrim.c	\
 		ft_split.c		\
 		ft_splitlen.c	\
+		ft_splitdup.c	\
+		ft_splitjoin.c	\
 		ft_itoa.c		\
 		ft_strmapi.c	\
 		ft_striteri.c	\
 		ft_putchar_fd.c	\
 		ft_putstr_fd.c	\
 		ft_putendl_fd.c	\
-		ft_putnbr_fd.c	
+		ft_putnbr_fd.c
 
 LIBFTCFILES :=	$(addprefix $(LIBFT)/free/, $(FREE))	\
 				$(addprefix $(LIBFT)/mem/, $(MEM))		\
@@ -62,23 +66,29 @@ LIBFTCFILES :=	$(addprefix $(LIBFT)/free/, $(FREE))	\
 				$(addprefix $(LIBFT)/str/, $(STR))
 
 # PRINTF
-PRINTFCFILES = ft_printf.c ft_types.c ft_print_sciu.c ft_print_p.c ft_print_x.c
-PRINTFCFILES := $(addprefix $(PRINTF)/, $(PRINTFCFILES))
+PRINTFCFILES := ft_printf.c ft_types.c ft_print_sciu.c ft_print_p.c ft_print_x.c
+PRINTFCFILES := $(addprefix $(PRINTF)/ft_printf/, $(PRINTFCFILES))	\
+				$(addprefix $(PRINTF)/ft_printf_fd/, $(PRINTFCFILES))
 
 # GNL
 GNLCFILES := get_next_line.c get_next_line_utils.c
 GNLCFILES := $(addprefix $(GNL)/, $(GNLCFILES))
 
+# DEBUG
+DEBUGCFILES := ft_print2.c
+DEBUGCFILES := $(addprefix $(DEBUG)/, $(DEBUGCFILES))
+
 # LIBS
-CFILES := $(LIBFTCFILES) $(PRINTFCFILES) $(GNLCFILES)
+CFILES := $(LIBFTCFILES) $(PRINTFCFILES) $(GNLCFILES) $(DEBUGCFILES)
 OFILES := $(CFILES:.c=.o)
+
 
 all: $(NAME)
 
 $(NAME): $(OFILES)
 	$(AR) $(NAME) $(OFILES)
 
-clean: 
+clean:
 	rm -f $(OFILES)
 
 fclean: clean
