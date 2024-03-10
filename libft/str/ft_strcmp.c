@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
+/*   By: annafenzl <annafenzl@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 20:18:58 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 18:56:24 by afenzl           ###   ########.fr       */
+/*   Updated: 2024/03/10 14:32:41 by annafenzl        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 //returns 0 if same
 int	ft_strcmp(char *str1, char *str2)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str1[i] == str2[i] && str1[i] != '\0')
-			i++;
+		i++;
 	return (str1[i] - str2[i]);
 }

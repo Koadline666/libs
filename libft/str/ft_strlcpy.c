@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
+/*   By: annafenzl <annafenzl@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 13:05:44 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 18:57:17 by afenzl           ###   ########.fr       */
+/*   Updated: 2024/03/10 14:32:57 by annafenzl        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			break ;
 		}
 		dst[i] = src[i];
-	i++;
+		i++;
 	}
 	dst[i] = '\0';
 	while (src[i] != '\0')

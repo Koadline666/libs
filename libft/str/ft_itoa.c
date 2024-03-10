@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afenzl <afenzl@student.42.fr>              +#+  +:+       +#+        */
+/*   By: annafenzl <annafenzl@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:30:02 by afenzl            #+#    #+#             */
-/*   Updated: 2022/08/03 21:18:18 by afenzl           ###   ########.fr       */
+/*   Updated: 2024/03/10 14:32:35 by annafenzl        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*ft_logic(int i, int vr, int n, char *str)
 			n = n / 10;
 			i++;
 		}
-	}	
+	}
 	str = (char *)malloc (sizeof(char) * (i + vr + 1));
 	if (str == NULL)
 		return (NULL);
