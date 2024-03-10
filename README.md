@@ -1,6 +1,6 @@
 # libs
 ## a C-Standard Library Remake
-This is a extended version of the __libft__ project for [42Heilbronn](https://www.42heilbronn.de/de/curriculum/)'s curriculum, also containing the __ft_printf__ as well as the __get_next_line__ project, plus sume extra helpful functions.
+This is a extended version of the __libft__ project for [42Heilbronn](https://www.42heilbronn.de/de/curriculum/)'s curriculum, also containing the __ft_printf__ as well as the __get_next_line__ project, plus some extra helpful functions.
 
 ## debug
 added function to print out two dimentional char arrays
