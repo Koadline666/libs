@@ -64,6 +64,8 @@ char	*ft_strtok(char *s, const char *delim)
 		s = last;
 	i = ft_strspan(s, delim);
 	tok = &s[i];
+	if (tok[0] = '\0')
+		return NULL;
 	last = ft_strstok_util(tok, delim);
 	return (tok);
 }
